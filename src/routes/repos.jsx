@@ -10,7 +10,7 @@ const Repos = () => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Bearer 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"
+    `Bearer ${import.meta.env.VITE_GITHUB_API_KEY}`
   );
 
   var requestOptions = {
@@ -37,7 +37,7 @@ const Repos = () => {
           A few of {name}'s Public Repos <hr />
         </h2>
         <>
-          {repoData.map((item) => (
+          {repoData.map((item) => 
             <RepoCards
               name={item.name}
               language={item.language}
@@ -45,7 +45,7 @@ const Repos = () => {
               link={item.html_url}
               created={item.created_at}
             />
-          ))}
+          )}
         </>
       </div>
     </>

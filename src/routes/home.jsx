@@ -15,7 +15,7 @@ const HomePage = () => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Bearer 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"
+    "Bearer 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"
   );
 
   var requestOptions = {
