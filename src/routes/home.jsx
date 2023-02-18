@@ -15,7 +15,7 @@ const HomePage = () => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Bearer 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"
+    `Bearer ${import.meta.env.VITE_GITHUB_API_KEY}`
   );
 
   var requestOptions = {
