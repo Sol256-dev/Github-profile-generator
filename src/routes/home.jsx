@@ -15,8 +15,10 @@ const HomePage = () => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Bearer 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"
+    `Bearer ${import.meta.env.VITE_GITHUB_API_KEY}` 
   );
+
+//   console.log(process.env);
 
   var requestOptions = {
     method: "GET",
@@ -35,7 +37,7 @@ const HomePage = () => {
     searchUserProfile();
   }, [profile]);
 
-  console.log(profile);
+  //   console.log(profile);
 
   return (
     <div className="container">
@@ -46,7 +48,9 @@ const HomePage = () => {
       <div className="main">
         <div className="section">
           {profile === "" ? (
-            <div className="home-msg"><h1>No content to display!</h1></div>
+            <div className="home-msg">
+              <h1>No content to display!</h1>
+            </div>
           ) : (
             <Card data={data} />
           )}

@@ -10,7 +10,7 @@ const Repos = () => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Bearer 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"
+    "Bearer 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"
   );
 
   var requestOptions = {
